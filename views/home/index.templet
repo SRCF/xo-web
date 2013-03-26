@@ -52,8 +52,8 @@
 		</div>
 	</div>
 
-	<div class="row-fluid offset1">
-		<div class="span5">
+	<div class="row-fluid">
+		<div class="span5 offset1">
 			<div class="widget">
 				<div class="widget-header">
 					<i class="icon-star"></i>
@@ -113,9 +113,6 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
 	</div>
 	<div class="modal hide fade" id="feature">
 		<div class="modal-header"> <a class="close" data-dismiss="modal">×</a>
@@ -135,9 +132,7 @@
 <script src="{$base_path}/js/bootstrap-tour.js"></script>
 <script src="{$base_path}/js/jquery.cookie.js"></script>
 <script>
-	'use strict';
-	var test = document.getElementById('bla');
-	//tour.start(true);
+	"use strict";
 	var tour = new Tour();
 	tour.addStep({{
 		element: "#tour_home",
@@ -187,7 +182,10 @@
 		title: "Login form",
 		content: "admin/admin is the default login. Don't forget to change it quickly ;)"
 	});
-	//$(document).on('click','.start',function(e){{e.preventDefault();tour.restart();alert(test);$('.alert').alert('close');});
-	$(document).on('click','.start',function(e){{e.preventDefault();tour.restart();$('.alert').alert('close');});
+	$(document).on("click", ".start", function (e) {{
+		e.preventDefault();
+		tour.restart();
+		$(".alert").alert("close");
+	});
 </script>
 {/block}
